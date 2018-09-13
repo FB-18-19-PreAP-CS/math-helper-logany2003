@@ -6,8 +6,9 @@ formula examples go here
 '''
 
 
-def asymptotes(a,b,c):
+def quadratic_formula(a,b,c):
     '''
-returns the asymptote(s) by plugging in the denominator
+returns the awnser when entered a,b, and c from formula ax^2 + bx + c
     '''
-    
+    if a==0:
+        return "You have divided by zero, error"
