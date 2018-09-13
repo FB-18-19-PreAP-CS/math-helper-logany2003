@@ -51,12 +51,12 @@ def fib(n):
         raise OverflowError("n is too large")
     
     # Here is the magic formula:
-    return (PHI**n - (-1/PHI)**n)/math.sqrt(5)
+    return int((PHI**n - (-1/PHI)**n)/math.sqrt(5))
     
     
     # change the return statement to the line below
     # in order to resolve the errors
-    # return int((PHI**n - (-1/PHI)**n)/math.sqrt(5))
+    #return int((PHI**n - (-1/PHI)**n)/math.sqrt(5))
                 
 if __name__ == "__main__":
     import doctest
