@@ -7,13 +7,19 @@ formula examples go here
 
 def quadratic(a,b,c):
     '''
-returns the answer when entered a,b, and c from formula ax^2 + bx + c
-    >>> quadratic(1,2,3)
+    returns the answer when entered a,b, and c
+    from formula ax^2 + bx + c
+    
     You can not have a negative or zero length
-    'No real solutions'
+    >>> quadratic(1,2,3)
+    Traceback (most recent call last):
+     ...
+    ValueError: No real solutions
     
     >>> quadratic(5,3,3)
-    'No real solutions'
+    Traceback (most recent call last):
+     ...
+    ValueError: No real solutions
     
     >>> quadratic(5,6,1)
     (-0.2, -1.0)
@@ -30,8 +36,8 @@ returns the answer when entered a,b, and c from formula ax^2 + bx + c
     if disc < 0:
         raise ValueError("No real solutions")
     if disc > 0:
-        answer1 = (-b + sqrt(disc)) / (2*a)
-        answer2 = (-b - sqrt(disc)) / (2*a)
+        answer1 = round((-b + sqrt(disc)) / (2*a),2)
+        answer2 = round((-b - sqrt(disc)) / (2*a),2)
         return answer1, answer2
     if disc == 0:
         answer = (-b) / (2*a)
