@@ -172,55 +172,57 @@ returns the distance between 2 points
     return dist
 
 def main():
-    print("Welcome to the math helper.")
-    print("There are five functions that you can use. They are quadratic,")
-    print("pythagorean, horizontal_asymptotes, compound_interest, and distance.")
-    print("For quadratic put in a 1, for pythagorean put in 2, for horizontal_asymptotes put in 3,")
-    print("for compound_interest, put in 4, and for distance put in 5.")
-    print(" ")
-    select = input("select which function to use: > ")
-    print(" ")
-    if select == "1":
-        print("enter the a, b, and c in the function ax^2 + bx + c to get the value of the zeros")
-        a = float(input("A: "))
-        b = float(input("B: "))
-        c = float(input("C: "))
-        print(quadratic(a,b,c))
-    elif select == "2":
-        print("enter the a and b values on the equation a^2 + b^2 = c^2 to get the length of the hypotanuse of a right trianle")
-        a = float(input("A: "))
-        b = float(input("B: "))
-        print(pythagorean(a,b))
-    elif select == "3":
-        print("enter the powers for a and b and the coefficients for c and d to get the location of the horizontal asymptotes")
-        a = float(input("A: "))
-        b = float(input("B: "))
-        c = float(input("C: "))
-        d = float(input("D: "))
-        print(horizontal_asymptotes(a,b,c,d))
-    elif select == "4":
-        print("enter the principal, rate, amount of times compounded, and time to get the compound interest")
-        principal = float(input("Principal: "))
-        rate = float(input("Rate: "))
-        compound_amount = float(input("Amount of times compounded: "))
-        time = float(input("Time: "))
-        print(compound_interest(principal, rate, compound_amount, time))
-    elif select == "5":
-        print("Enter two points in the for x1,y1,x2,y2 to get the distance between them")
-        x1 = float(input("X1: "))
-        y1 = float(input("Y1: "))
-        x2 = float(input("X2: "))
-        y2 = float(input("Y2: "))
-        print(distance(x1,y1,x2,y2))
-    else:
-        raise ValueError("You did not select one of the functions, please try again")
-    print("Would you like to go through again?")
-    print("If yes type 'y'")
-    print("If no type 'n'")
-    if try == "y":
-        main()
-    else:
-        break
+    while True:
+        print("Welcome to the math helper.")
+        print("There are five functions that you can use. They are quadratic,")
+        print("pythagorean, horizontal_asymptotes, compound_interest, and distance.")
+        print("For quadratic put in a 1, for pythagorean put in 2, for horizontal_asymptotes put in 3,")
+        print("for compound_interest, put in 4, and for distance put in 5.")
+        print(" ")
+        select = input("select which function to use: > ")
+        print(" ")
+        if select == "1":
+            print("enter the a, b, and c in the function ax^2 + bx + c to get the value of the zeros")
+            a = float(input("A: "))
+            b = float(input("B: "))
+            c = float(input("C: "))
+            print(quadratic(a,b,c))
+        elif select == "2":
+            print("enter the a and b values on the equation a^2 + b^2 = c^2 to get the length of the hypotanuse of a right trianle")
+            a = float(input("A: "))
+            b = float(input("B: "))
+            print(pythagorean(a,b))
+        elif select == "3":
+            print("enter the powers for a and b and the coefficients for c and d to get the location of the horizontal asymptotes")
+            a = float(input("A: "))
+            b = float(input("B: "))
+            c = float(input("C: "))
+            d = float(input("D: "))
+            print(horizontal_asymptotes(a,b,c,d))
+        elif select == "4":
+            print("enter the principal, rate, amount of times compounded, and time to get the compound interest")
+            principal = float(input("Principal: "))
+            rate = float(input("Rate: "))
+            compound_amount = float(input("Amount of times compounded: "))
+            time = float(input("Time: "))
+            print(compound_interest(principal, rate, compound_amount, time))
+        elif select == "5":
+            print("Enter two points in the for x1,y1,x2,y2 to get the distance between them")
+            x1 = float(input("X1: "))
+            y1 = float(input("Y1: "))
+            x2 = float(input("X2: "))
+            y2 = float(input("Y2: "))
+            print(distance(x1,y1,x2,y2))
+        else:
+            raise ValueError("You did not select one of the functions, please try again")
+        print("Would you like to go through again?")
+        print("If yes type 'y'")
+        print("If no type 'n'")
+        again = input("> ")
+        if again == "y":
+            main()
+        else:
+            break
         
     
 if __name__ == "__main__":
