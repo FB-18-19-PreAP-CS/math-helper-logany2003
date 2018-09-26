@@ -132,21 +132,22 @@ per year, and the time in years
     ValueError: you cannot compound interest 0 times a year
     
     >>> compound_interest(1200,.1249,12,.5)
-    1276.92
+    $1276.92
     
     >>> compound_interest(10000,.08,4,1)
-    10824.32
+    $10824.32
     
     >>> compound_interest(12500,.045,4,8)
-    17880.64
+    $17880.64
     
     >>> compound_interest(4000,.08,4,1)
-    4329.73
+    $4329.73
     '''
     if compound_amount == 0:
         raise ValueError("you cannot compound interest 0 times a year")
     amount = principal*(1 + (rate/compound_amount))**(compound_amount*time)
     amount = round(amount,2)
+    amount = "$" + str(amount)
     return amount
     
 def distance(x1,y1,x2,y2):
