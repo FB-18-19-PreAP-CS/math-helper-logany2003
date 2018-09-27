@@ -190,11 +190,13 @@ def main():
             a = float(input("A: "))
             b = float(input("B: "))
             c = float(input("C: "))
+            print(" ")
             print(quadratic(a,b,c))
         elif select == "2":
             print("enter the a and b values on the equation a^2 + b^2 = c^2 to get the length of the hypotanuse of a right trianle")
             a = float(input("A: "))
             b = float(input("B: "))
+            print(" ")
             print(pythagorean(a,b))
         elif select == "3":
             print("enter the powers for a and b and the coefficients for c and d to get the location of the horizontal asymptotes")
@@ -202,6 +204,7 @@ def main():
             b = float(input("B: "))
             c = float(input("C: "))
             d = float(input("D: "))
+            print(" ")
             print(horizontal_asymptotes(a,b,c,d))
         elif select == "4":
             print("enter the principal, rate, amount of times compounded, and time in years to get the compound interest")
@@ -209,6 +212,7 @@ def main():
             rate = float(input("Rate: "))
             compound_amount = float(input("Amount of times compounded: "))
             time = float(input("Time: "))
+            print(" ")
             print(compound_interest(principal, rate, compound_amount, time))
         elif select == "5":
             print("Enter two points in the for x1,y1,x2,y2 to get the distance between them")
@@ -216,9 +220,11 @@ def main():
             y1 = float(input("Y1: "))
             x2 = float(input("X2: "))
             y2 = float(input("Y2: "))
+            print(" ")
             print(distance(x1,y1,x2,y2))
         else:
             raise ValueError("You did not select one of the functions, please try again")
+        print(" ")
         print("Would you like to go through again?")
         print("If yes type 'y'")
         print("If no type 'n'")
@@ -226,7 +232,8 @@ def main():
         if again == "y":
             main()
         else:
-            break
+            print("Thanks for using this helper!")
+            return
         
     
 if __name__ == "__main__":
